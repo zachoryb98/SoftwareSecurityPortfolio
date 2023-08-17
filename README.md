@@ -10,9 +10,12 @@ At first I found it difficult to understand which ones were false positives and 
 
 
 How did you increase layers of security? In the future, what would you use to assess vulnerabilities and decide which mitigation techniques to use?
+I slowly implemented different functionality that increased the different layers of security. First of all I implemented secure and quality code. There was no input in this application at this point so no input validation is needed. However the code that was implemented does have exception handling. After this I implemented SSL to make sure the data transmitted over apis is secure. I ran the dependency check and made sure we were not vulnerable from out of date libraries. If the application were fully fledged out I would recommend a penetration test or have your internal dev team try things such as SQL injection or Cross Site Scripting to see if there are any potential security issues.
 
 How did you make certain the code and software application were functional and secure? After refactoring the code, how did you check to see whether you introduced new vulnerabilities?
+I ran a secondary dependency check and found the vulnerabilities were the same. I updated dependencies and saw the count go down all the way until I just had two false positives. After this I ran the application and tried to break it by navigating to pages that didn't exist, passing in variables, messing with the dev tools, and so on. I did not feel that for the status of the project that there were any serious issues.
 
 What resources, tools, or coding practices did you use that might be helpful in future assignments or tasks?
+I used OOP, Google to find Maven dependency versions, Google to find spring-boot documentation, I used stack overflow to get a better understanding of solutions of modern technology, I used the Eclipse Keystore tool to generate a new keystore and certificate to make my site secure. Overall knowing how to generate a keystore will be helpful.
 
 Employers sometimes ask for examples of work that you have successfully completed to show your skills, knowledge, and experience. What might you show future employers from this assignment?
